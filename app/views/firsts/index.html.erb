@@ -1,0 +1,39 @@
+<h1>Listing firsts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Last</th>
+    <th>Name</th>
+    <th>Emailid</th>
+    <th>User</th>
+    <th>Name</th>
+    <th>Password</th>
+    <th>Contact</th>
+    <th>Number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @firsts.each do |first| %>
+  <tr>
+    <td><%= first.name %></td>
+    <td><%= first.last %></td>
+    <td><%= first.name %></td>
+    <td><%= first.emailid %></td>
+    <td><%= first.user %></td>
+    <td><%= first.name %></td>
+    <td><%= first.password %></td>
+    <td><%= first.contact %></td>
+    <td><%= first.number %></td>
+    <td><%= link_to 'Show', first %></td>
+    <td><%= link_to 'Edit', edit_first_path(first) %></td>
+    <td><%= link_to 'Destroy', first, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New First', new_first_path %>
